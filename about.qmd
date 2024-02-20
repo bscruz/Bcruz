@@ -1,5 +1,6 @@
 ---
 title: "Brenda Cruz"
+image: images/600148b9918f6ef687f033fcbc9a6b5a-03.png
 about:
   id: hero-heading
   template: jolla
