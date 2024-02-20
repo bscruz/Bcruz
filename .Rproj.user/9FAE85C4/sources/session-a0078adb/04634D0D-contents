@@ -1,0 +1,31 @@
+---
+title: "Brenda Cruz"
+pagetitle: "Brenda Cruz"
+subtitle: Biotechnoogy
+image: images/1708460975684-Standard.png
+image-alt: "A cool little image"
+about:
+  template: solana
+  image-width: em
+  id: hero-heading
+  links:
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/bscruz
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: www.linkedin.com/in/brenda-cruz-0792b0234
+page-layout: full
+
+
+
+header-includes: >
+  <link rel="stylesheet" href="index.css">
+css: index.css
+---
+
+::: {#hero-heading}
+I am a researcher. I do a lot of cool stff. I made this cool little website and right now i have to write a whole paragraph so that this image looks cool and fits well , but idk what to write. In this part im going to write about my research what i do and things like that will look wvery educated in the end
+
+[About Me! →](/about.qmd){.about-links .subtitle}
+:::

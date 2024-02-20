@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
 
 website:
   search: false
@@ -8,9 +7,8 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: "Home"
-      - href: about.qmd
-        text: "About Me"
+        text: Home
+      - about.qmd
     right: 
       - icon: github
         href: https://github.com/bscruz

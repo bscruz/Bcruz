@@ -1,0 +1,58 @@
+---
+title: "Silvia Canelón, PhD"
+pagetitle: "Silvia Canelón, PhD"
+subtitle: "Data Analyst at the Penn Urban Health Lab"
+image: assets/silvia/img/skyline-philly.png
+image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
+
+twitter-card:
+    title: Silvia Canelón, PhD
+    description: |
+      Researcher and R educator applying biomedical and spatial data science in ways that prioritize health equity.
+    image: assets/silvia/img/silvia-social.png
+
+about:
+  template: solana
+  image-width: 28em
+  id: hero-heading
+  links:
+    - text: "{{< fa universal-access >}}"
+      aria-label: "Accessibility statement"
+      href: accessibility.qmd
+    - icon: mastodon
+      href: https://fosstodon.org/@spcanelon
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/spcanelon
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0003-1709-1394
+    - text: "{{< ai google-scholar >}}"
+      aria-label: "Google Scholar"
+      href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: https://linkedin.com/in/spcanelon
+page-layout: full
+
+execute: 
+  freeze: false
+  echo: false
+  warning: false
+
+header-includes: >
+  <link rel="stylesheet" href="assets/index.css">
+resources:
+  - assets/index.css
+include-in-header: assets/umami.html
+---
+
+<br><br>
+
+::: {#hero-heading}
+I am a researcher and R educator with a love for community. <br>My **research** leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My **community** projects value the partnership between open source tools and data literacy as a way to build power and effect change.
+
+[Learn more about me →](/about){.about-links .subtitle}
+
+
+
+:::
