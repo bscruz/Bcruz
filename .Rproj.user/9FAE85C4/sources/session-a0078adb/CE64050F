@@ -3,7 +3,7 @@
     "path": "~/Applications/websitebcruz/bcruz.github.io/about.qmd",
     "project_path": "about.qmd",
     "type": "quarto_markdown",
-    "hash": "1362353436",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1708469464647.0,
@@ -17,7 +17,7 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "441:337",
-        "cursorPosition": "42,18",
+        "cursorPosition": "42,0",
         "scrollLine": "27"
     },
     "folds": "",

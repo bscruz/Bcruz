@@ -1,0 +1,3 @@
+"0","data = FileAttachment(""palmer-penguins.csv"").csv({ typed: true })"
+"2","/bin/sh: ojs: command not found
+"

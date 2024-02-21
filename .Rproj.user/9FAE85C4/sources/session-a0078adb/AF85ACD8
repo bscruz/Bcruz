@@ -3,7 +3,7 @@
     "path": "~/Applications/websitebcruz/bcruz.github.io/theme.scss",
     "project_path": "theme.scss",
     "type": "scss",
-    "hash": "1532548067",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1708301034177.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "367,0",
-        "scrollLine": "346"
+        "cursorPosition": "31,16",
+        "scrollLine": "29"
     },
     "folds": "",
     "lastKnownWriteTime": 1708469490,
