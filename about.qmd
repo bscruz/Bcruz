@@ -24,6 +24,7 @@ resources:
 
 ::: {#hero-heading}
 ## Welcome
+
 helllooo welcome to this website that i have not figure out whst to do with, but more updates coming soon
 
 CURRENTLY working on setting this title TO THE CENTER
@@ -44,5 +45,3 @@ majestic spiderman coming up
 
 ### 
 :::
-
-![](images/E5xKvUHy7uyiVetp8WSpPo-1200-80.jpg){.column-screen}

@@ -25,6 +25,20 @@
     "href": "index.html",
     "title": "Brenda Cruz",
     "section": "",
-    "text": "mouse around heart for a COOOl effect I made this cool little website and right now i have to write a whole paragraph so that this image looks cool and fits well , but idk what to write. In this part im going to write h what i do and things like and other stuff about my goals and such (all template stuff rn)\nAbout Me! →\n\n    \n    \n  \n\n\n\n\n\n    \n    \n    Your Page Title"
+    "text": "mouse around heart for a COOOl effect I made this cool little website and right now i have to write a whole paragraph so that this image looks cool and fits well , but idk what to write. In this part im going to write h what i do and things like and other stuff about my goals and such (all template stuff rn)\nAbout Me! →"
+  },
+  {
+    "objectID": "blog/2024-02-20-short-post-description/index.html",
+    "href": "blog/2024-02-20-short-post-description/index.html",
+    "title": "blog post title",
+    "section": "",
+    "text": "CitationBibTeX citation:@online{csik2022,\n  author = {Csik, Samantha},\n  title = {Blog Post Title},\n  date = {2022-10-24},\n  url = {https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nCsik, Samantha. 2022. “Blog Post Title.” October 24, 2022.\nhttps://samanthacsik.github.io/posts/2022-10-24-my-blog-post/."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "blog post title\n\n\n\nQuarto\n\n\nR\n\n\nMEDS\n\n\n\nblog post description (appears underneath the title in smaller text) which is included on the listing page\n\n\n\nSamantha Csik\n\n\nOct 24, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

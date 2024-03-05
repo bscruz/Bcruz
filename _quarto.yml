@@ -9,6 +9,7 @@ website:
     left:
       - href: about.qmd
         text: "About Me"
+      - blog.qmd
     right: 
       - icon: github
         href: https://github.com/bscruz
@@ -18,7 +19,6 @@ format:
     theme: 
       - minty
       - theme.scss
-    css: styles.css
     toc: true
 
 editor: visual

@@ -2,7 +2,6 @@
 title: "Brenda Cruz"
 pagetitle: "Brenda Cruz"
 subtitle: Biotechnology
-image: images/1708460975684-Standard.png
 image-alt: "A cool little image"
 about:
   template: solana
@@ -14,24 +13,24 @@ about:
       href: https://github.com/bscruz
     - icon: linkedin
       aria-label: "LinkedIn"
-      href: www.linkedin.com/in/brenda-cruz-0792b0234
+      href: https://www.linkedin.com/in/brenda-cruz-0792b0234
 page-layout: full
 
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
 css: index.css
+
 ---
 
 
-::: {#hero-heading}
 
-mouse around heart for a COOOl effect  I made this cool little website and right now i have to write a whole paragraph so that this image looks cool and fits well , but idk what to write. In this part im going to write h what i do and things like and other stuff about my goals and such (all template stuff rn)
+::: {#hero-heading}
+mouse around heart for a COOOl effect I made this cool little website and right now i have to write a whole paragraph so that this image looks cool and fits well , but idk what to write. In this part im going to write h what i do and things like and other stuff about my goals and such (all template stuff rn)
 
 [[About Me! →]{.underline}](/about.qmd){.about-links .subtitle}
 :::
 
-::: {.column-screen-right}
 
 ```{=html}
 <html lang="en">
@@ -125,5 +124,3 @@ mouse around heart for a COOOl effect  I made this cool little website and right
 </html>
 ```
 
-:::
-:::
