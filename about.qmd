@@ -12,11 +12,6 @@ about:
 format: 
   html: 
     page-layout: full
-
-header-includes: >
-  <link rel="stylesheet" href="../assets/about.css">
-resources:
-  - ../assets/about.css
 ---
 
 ------------------------------------------------------------------------

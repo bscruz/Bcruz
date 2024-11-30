@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Samantha Csik">
-<meta name="dcterms.date" content="2022-10-24">
-<meta name="description" content="blog post description (appears underneath the title in smaller text) which is included on the listing page">
+<meta name="author" content="Brenda Cruz">
+<meta name="dcterms.date" content="2024-05-06">
+<meta name="description" content="A deep dive into radiomics and machine learning models">
 
-<title>Brenda Cruz - blog post title</title>
+<title>Brenda Cruz - Medical imaging enters a new era with cutting-edge Machine learning techniques for Detection of Breast Cancer Molecular Subtypes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,11 +53,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: images/banner.jpeg;
+      }
+</style>
 
 
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -96,58 +102,14 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">blog post title</h1>
-                  <div>
-        <div class="description">
-          blog post description (appears underneath the title in smaller text) which is included on the listing page
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">Quarto</div>
-                <div class="quarto-category">R</div>
-                <div class="quarto-category">MEDS</div>
-              </div>
-                  </div>
-  </div>
-    
-  <div class="quarto-title-meta-author">
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-heading">Affiliation</div>
-    
-      <div class="quarto-title-meta-contents">
-      <p class="author"><a href="https://samanthacsik.github.io/">Samantha Csik</a> <a href="https://orcid.org/0000-0002-5300-3075" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-    </div>
-    <div class="quarto-title-meta-contents">
-          <p class="affiliation">
-              <a href="https://ucsb-meds.github.io/">
-              Master of Environmental Data Science Program @ The Bren School (UCSB) &amp; The National Center for Ecological Analysis &amp; Synthesis
-              </a>
-            </p>
-        </div>
-    </div>
-
-  <div class="quarto-title-meta">
-
-        
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">October 24, 2022</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -155,20 +117,51 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="featured-screen">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/radiomicspic-02.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="theme.scss"></p>
+</figure>
+</div>
+</div>
+<p><strong>UWP 104 Science</strong></p>
+<p><strong>By Brenda Cruz</strong></p>
+<p><br>
+</p>
+<p>Radiomics, a new field studying medical imaging for detection of breast cancer has emerged!&nbsp;</p>
+<p>By studying imaging features, researchers can accurately predict breast cancer molecular subtypes using MRI or mammographies. Mammography screenings are given yearly to women after 45 years old who are at an average risk of obtaining breast cancer. They are like Jane, a 48 year old mother of 3, who’s own mother dealt with complications during her breast cancer journey at 40 years old. A doctor decided to start Jane with her bi-yearly mammography screening, after taking into account her family history.&nbsp;</p>
+<p>Jane, like many other women, found reassurance in her bi-yearly mammography screening, which provides the earliest signs of breast cancer detection.&nbsp; With the&nbsp; mammography, radiologists look for early signs of breast cancer by analyzing the distortions, calcifications, and masses to help detect certain molecular subtypes of cancer. The 4 molecular subtypes of breast cancers are luminal A, luminal B, HER2- positive, and triple negative.&nbsp; With the rise of technology, machine learning programs are being used to assist radiologists in the detection of cancer molecular subtypes. Jane’s doctor informed her about the new machine learning models being utilized on her mammography screen to identify the molecular subtype. This method will replace the need for the invasive tru-cut biopsy procedure typically used for obtaining tissue specimens in IHC treatment. Additionally,&nbsp; This technique may provide inconclusive results due to the undersampling of the tumor tissue or inadequate biopsy. Using the advancements in technology Jane’s doctor was able to&nbsp; confirm the presence of luminal A cancer subtype.&nbsp; However, with radiomics being a new form of technology, women much like Jane are skeptical on the use of machine learning to detect molecular subtypes of cancer.</p>
+<p>While Radiomics may be a new form of technology, machine learning programs have been implemented for breast cancer detection for quite some time already.&nbsp; There are different types of&nbsp; machine learning programs used for molecular cancer subtypes, and Minxiang Wu and his team&nbsp; at the Department of Biomedical Engineering in the Netherlands have concluded that the decision tree model is the preferred method by training the model with the BI-RADS manual.<img src="https://lh7-us.googleusercontent.com/DSVs57Q0RFYboz2JKf5fIwm7RFTPzDT_ZbbzDAEPjtav6QG0rPTA0e-UjgPCMVuVgv3rxL12PFLRxD9hYI4nqyu1OtYOon8EngGpxM53sHwN9_nq1spCea6CNaBKB8W5lZtpLo-wkFwlCKP-1GScs98.png" class="img-fluid" alt="Figure 1"></p>
+<p>The BI- RADS manual provides the standardized breast imaging terminology, report organization, assessment, structure, and a classification system for mammography or MRI of the breast. This manual most likely helped radiologists in the 1990s detect Jane’s mother’s breast cancer.</p>
+<p>With advancements in technology researchers&nbsp; have used this&nbsp; manual&nbsp; to train machine learning programs to detect molecular subtypes. The decision tree uses 7 features from the BI-RADs manual to classify the molecular subtypes by defining the important features in the subtypes. The decision tree categorizes the different molecular subtypes depending on the by masses margin, and calcification, mass margin, breast-feeding&nbsp; The radiologists uss&nbsp; the output of the decision tree model as a reference while examining&nbsp; the MRI.&nbsp; The scientists Minxiang were able to create a decision tree as shown in figure 1. <img src="https://lh7-us.googleusercontent.com/pHh_-yzyKw3Ki0JYSA0X6yHXBdm4xDWcMs0x4ZM_Hl1n-7nN0qrxm7qBmC9Y9XE9YPP58pR_CYF6kSdrbkEfCzRNK3TvX9S4iYaz_QVhF1ZdyxN8kU3CrbSDH1wITgbx5sOIzeJB_svf-GnW9BMA5Ic.png" class="img-fluid">Then, the radiologists use their own feature extraction skills to confirm the presence for Luminal A. For example, in the case of Jane, her radiologist was able to detect the presence of luminal A because the decision tree’s output identified the likelihood she will have luminal A. due to&nbsp; her breast feeding history. Using the the decision tree, her radiologists was able to predict her molecular subtype being LUminal A rather than LUminal B subtype because one rule set in the decision tree to detect luminal A and luminal B is woman who have LUminal B have less of a history of breastfeeding. With other rule sets, the decision tree and her radiologists&nbsp; were able to further confirm these analyses.&nbsp;</p>
+<p>However Jane was still not convinced by her diagnosis, she worried that if the radiologists confirmed the wrong subtype it would malinform her treatment plan. Molecular subtype is taken into account because a cancer fueled by specific hormones or other proteins may have better outcomes when treated with targeted options.The molecular subtypes of breast cancer are closely related to the treatment and prognosis of patients so jts important e confirm your molecular subtype.&nbsp; Taking into account Jane’s worries her doctor prescribed her with an MRI to further confirm results.&nbsp;</p>
+<p><br>
+<br>
+<br>
+<br>
+<img src="https://lh7-us.googleusercontent.com/nKqiaz5MT2o2Rn73syD5CPI5uxkP3vicXAABFp6NIGHe6Vk5RIasb_9sYQHsrDTvmJRIkoEkLHwa62GGERd0vdiTQyakAxiM7CFwlqoCUJOKpJibi_Y6YVk6dgPpVzh1hQdRXp1vFaf2-A8hcoUnmlc.png" class="img-fluid"></p>
+<p>Usually a second screening is required for clarity. MRI and mammography&nbsp; are oftentimes used together to visualize breast cancer in different ways to provide the most information to the radiologists. With an MRI, radiomics can be used to accurately predict the molecular subtype. Radiomics uses Dynamic contrast enhanced magnetic resonance imaging (DCE-MRI). DCE-MRI enables the quantitative assessment of tumor status by evaluating pattern recognition algorithms and provides features such as tumor size, shape intensity and texture for tumor characterization.&nbsp;</p>
+<p>With radiomics the intratumoral subregions are created to distinguish between multiple&nbsp; molecular subtypes by dividing the whole tumor into 3 subregions on the basis of the changes in pixel intensity at different imaging stages. In figure 3,&nbsp; the color changes and becomes more intense depending on the values of time to peak. For instance, in medical imaging, researchers such as Yue and his team are interested in calculating the number of pixels representing a tumor or a specific anatomical structure.<img src="https://lh7-us.googleusercontent.com/WTb6FKQ5DSxxW1JQYQKUNULNkWtG-d3TY8zEVj5HbQCrpSzqSvZW3DrNZfVVc0PXW2TvOyTkQWE_ZLohEfzais27f-B1EpFPY46AvMDZX0EmcpxRCWqVBsoDpAYH65epURjzlBe9qjlHOsqmmQWKqhM.png" class="img-fluid"></p>
+<p>So, “describing time to peak and calculating pixels” could involve analyzing an image to determine how long it takes for a certain intensity level to reach its maximum, and then quantifying the number of pixels associated with that feature</p>
+<p>Breast cancer is a heterogeneous disease with different morphological and biological characteristics thus different biological processes. With radiomics we can extract features from images to quantitative textual analysis allowing researchers to infer certain biological processes are connected with certain molecular subtypes.&nbsp;</p>
+<p>Figure 3. is a breast imaging MRI scan with radiomics application. Figure 3 shows the tumors partitioned by time to peak calculations, with the red, green, and blue colors representing early, moderate, and late Time to peak. Luminal A tumor has higher mean intensity values, which is seen here in the pronounced color of red in the second image.Texture features reflected the difference in the heterogeneity between subtypes Shuqian Feng and dhis team use images such as these to develop classifier models to predict breast cancer luminal subtypes. In the future radiomics applications can be used for molecular classification as a non-invasive, cost and time-effective alternative method, or as an auxiliary tool prior to biopsy to target the most heterogeneous part of the tumor.</p>
+<p>However, using time to peak calculation for radiomics&nbsp; is time consuming, and JAne wanted her&nbsp; diagnosis to be quick and accurate so she asked her doctor about the quickest method.&nbsp;</p>
+<p>Thankfully, her doctor had just read that Yue and his team back in the Netherlands managed to use&nbsp; automatic segmentation techniques, a form of machine learning to facilitate the RAPID and consistent delineation of lesions using MRI. &nbsp;Her doctor can plan&nbsp; to rapidly work on her analysis of molecular subtype. Jane was happy to hear this for a disease like cancer, every second counts! The faster she can start an effective treatment plan the better.&nbsp;</p>
+<p>Radiologists&nbsp; proceed with further analysis of the MRI images, using the random forest algorithms to assist them in the detection of molecular subtypes by helping them autosegmental regions of the tumor. Remember, the decision tree models used to assist radiologists in earlier applications of machine learning programs, well those same decision models can be implemented in radiomics.&nbsp; Decision tree models are a great use of an adaptive test&nbsp; where the outcome of previous tests influence the next performance test. This same idea applies to the random forest tree algorithm which is made up of smaller decision tree models..&nbsp; The randomness allows for the best image feature to be extracted from a random subset of features to include a wide diversity of the model, by also enabling faster results of texture analysis, thereby enhancing the assistive capabilities for radiologists.&nbsp; Automated processing by AI computational tools is a more efficient detection approach to measure the volume and the size of a tumor within a reasonable amount of time. It has great reference significance for guiding the clinical development of follow-up treatment plans and avoiding inaccurate measurement incurred by some inexperienced radiologists.</p>
+<p>Jane’s radiologist was able to use radiomics with machine learning programs to make an accurate prediction of the Luminal A molecular subtype. Janes is now&nbsp; confident in&nbsp; results and will be starting treatment soon. She is thankful her doctors heard her worries and were able to walk her through the process.&nbsp;</p>
+<p>Here we are with the patient, Jane as she follows up on her treatment, she has a few words she would like to add. “I was worried this new technology would solely dictate my diagnosis without context on the reasoning behind its prediction, but now that I understand radiologists use radiomics and machine learning programs as a tool to make precise predictions, I can feel confident this is the best way for me to obtain accurate and quick results.”&nbsp;</p>
+<p><br>
+<br>
+</p>
+<p><br>
+</p>
 
 
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{csik2022,
-  author = {Csik, Samantha},
-  title = {Blog Post Title},
-  date = {2022-10-24},
-  url = {https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/},
-  langid = {en}
-}
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-csik2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-Csik, Samantha. 2022. <span>“Blog Post Title.”</span> October 24, 2022.
-<a href="https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/">https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/</a>.
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-cruz2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Cruz, Brenda. 2024. <span>“Medical Imaging Enters a New Era with
+Cutting-Edge Machine Learning Techniques for Detection of Breast Cancer
+Molecular Subtypes.”</span> May 6, 2024.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -556,6 +549,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 

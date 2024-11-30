@@ -1,0 +1,111 @@
+html {
+  background: none;
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 4.0vh;
+}
+.helix {
+  transform: rotateZ(45deg);
+}
+.strand {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.5em;
+  --d: calc(var(--i) / var(--total));
+  --color: hsl(calc(-0.05turn + (var(--d) * 0.85turn)), 95%, 75%);
+  --duration: 1.5s;
+  --delay: calc((var(--duration) * -1) + 0.1s * var(--i));
+  animation: var(--duration) cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: var(--delay);
+}
+.left,
+.right {
+  animation: inherit;
+  display: grid;
+  grid-template-areas: "layer";
+  align-items: center;
+  width: 7em; #changed this to change size
+}
+.left > *,
+.right > * {
+  grid-area: layer;
+}
+.left {
+  transform: translateZ(0px);
+}
+.right {
+  transform: scaleX(-1);
+}
+.dot {
+  animation: inherit;
+  animation-duration: calc(var(--duration) * 2);
+  animation-name: move-dot;
+  --scale-start: 0.5;
+  --scale-end: 1;
+}
+@-webkit-keyframes move-dot {
+  50% {
+    transform: translateX(200%);
+  }
+}
+@keyframes move-dot {
+  50% {
+    transform: translateX(200%);
+  }
+}
+.right .dot {
+  --scale-start: 1;
+  --scale-end: 0.5;
+}
+.dot::before {
+  display: block;
+  content: "";
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  background: var(--color);
+  animation: inherit;
+  animation-name: scale-dot;
+}
+@-webkit-keyframes scale-dot {
+  33% {
+    transform: scale(var(--scale-start));
+  }
+  66% {
+    transform: scale(var(--scale-end));
+  }
+}
+@keyframes scale-dot {
+  33% {
+    transform: scale(var(--scale-start));
+  }
+  66% {
+    transform: scale(var(--scale-end));
+  }
+}
+.line {
+  width: calc(100% - 1.5em);
+  height: 0.25em;
+  border-radius: 1em;
+  background: var(--color);
+  margin-left: auto;
+  transform-origin: center right;
+  animation: inherit;
+  animation-name: scale-line;
+}
+@-webkit-keyframes scale-line {
+  50% {
+    transform: scaleX(0.1);
+  }
+}
+@keyframes scale-line {
+  50% {
+    transform: scaleX(0.1);
+  }
+}

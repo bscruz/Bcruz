@@ -1,11 +1,10 @@
-
 }
 //* title */
 .title {
-  font-size: 5em;
-  font-weight: 500;
-  line-height: 1.1em;
-  text-align: center !important;
+  font-size: 3em;
+  font-family: "Petrona";
+  font-weight: 700;
+  line-height: 1.1em !important;
 }
 
 /* subtitle + Learn More About Me */
@@ -43,9 +42,13 @@
 
 /* Learn More About Me */
 .about-links.subtitle {
-  font-size: 1em !important;
+  font-size: 1.2em !important; /* Consolidated font-size */
   font-family: "Red Hat Text";
   justify-content: flex-end !important;
+    &:hover {
+      text-decoration: underline !important; /* Add underline on hover */
+    }
+  }
 }
 
 /* image */
