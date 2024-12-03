@@ -4,28 +4,28 @@
     "href": "about.html#welcome",
     "title": "Brenda Cruz",
     "section": "Welcome",
-    "text": "Welcome\nhelllooo welcome to this website that i have not figure out whst to do with, but more updates coming soon\nCURRENTLY working on setting this title TO THE CENTER"
+    "text": "Welcome\nI’m currently a part of the LIFT Bioinnovation group working on setting up a computaional data course for UC Davis"
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "Brenda Cruz",
     "section": "Education",
-    "text": "Education\n| University of California, Davis | | B.S in Biotechnology with a Specialization in Bioinformatics |\n| Sept 2021 - June 2025 |\n|Contra Costa College | Sept 2019 - June 2025 |"
+    "text": "Education\nUniversity of California, Davis\nB.S in Biotechnology with a Specialization in Bioinformatics | Sept 2021 - June 2025 |\nContra Costa College | Sept 2019 - June 2021 |"
   },
   {
     "objectID": "about.html#experience",
     "href": "about.html#experience",
     "title": "Brenda Cruz",
     "section": "Experience",
-    "text": "Experience\nUC Davis Analytical Lab | Lab Assistant | February 2023 - present"
+    "text": "Experience\n\n\nUC Davis Analytical Laboratory January 2023 -- June 2024|Assistant Davis, CA\n\nAssist laboratory technicians with 40+ soil measurements daily and performances of analysis on selected chemical constituents of soil, plant, water, and feed\n\n\n\nData Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA\n\nFormulating experimental approaches to current questions in biotechnology; performance of proposed experiments.\nDuties include quality analysis and control for sequencing data, assembling and annotating metagenomic reads, quickly comparing large sequencing datasets, document workflows using git and GitHub."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Brenda Cruz",
     "section": "",
-    "text": "As a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 and EVE 103 which introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program called Hack the Hood based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, I have learned how computational courses are structured and taught, grounding my technical learning in current social justice topics. This work has empowered me to bring my knowledge back to the community.\nAbout Me! →"
+    "text": "Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 and EVE 103 which introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program called Hack the Hood based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, has empowered me to bring my knowledge back to the community.\nAbout Me! →"
   },
   {
     "objectID": "blog.html",
@@ -61,5 +61,12 @@
     "title": "Brenda Cruz",
     "section": "",
     "text": "Medical imaging enters a new era with cutting-edge Machine learning techniques for Detection of Breast Cancer Molecular Subtypes\n\n\n\n\n\n\nMedicine\n\n\n\n\n\n\nMay 6, 2024\n\n\nBrenda Cruz\n\n\n\n\n\n\nNo matching items\n\nReuseCC BY-SA 4.0"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Brenda Cruz",
+    "section": "",
+    "text": "Hey, I’m happy you’re here\n\nI’m currently a part of the LIFT Bioinnovation group working on setting up a computaional data course for UC Davis\n\n\nEducation\n\nUniversity of California, Davis\nB.S in Biotechnology with a Specialization in Bioinformatics | Sept 2021 - June 2025 |\nContra Costa College | Sept 2019 - June 2021 |\n\n\n\n\nExperience\n\n\n\nUC Davis Analytical Laboratory January 2023 -- June 2024|Assistant Davis, CA\n\nAssist laboratory technicians with 40+ soil measurements daily and performances of analysis on selected chemical constituents of soil, plant, water, and feed\n\n\n\nData Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA\n\nFormulating experimental approaches to current questions in biotechnology; performance of proposed experiments.\nDuties include quality analysis and control for sequencing data, assembling and annotating metagenomic reads, quickly comparing large sequencing datasets, document workflows using git and GitHub."
   }
 ]

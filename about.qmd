@@ -1,9 +1,11 @@
 ---
 title: "Brenda Cruz"
+subtitle: Bioinformatics
 about:
-  id: hero-heading
   template: trestles
+  image: images/yas.jpeg
   image-width: 15em
+  id: hero-heading
   links:
     - icon: linkedin
       href: www.linkedin.com/in/brenda-cruz-0792b0234
@@ -17,23 +19,49 @@ format:
 ------------------------------------------------------------------------
 
 ::: {#hero-heading}
-## Welcome
+::: h1
+Hey, I'm happy you're here
+:::
 
-helllooo welcome to this website that i have not figure out whst to do with, but more updates coming soon
+I'm currently a part of the LIFT Bioinnovation group working on setting up a computaional data course for UC Davis
 
-CURRENTLY working on setting this title TO THE CENTER
+------------------------------------------------------------------------
 
-## Education
+::: h1
+Education
+:::
 
-\| University of California, Davis \| \| B.S in Biotechnology with a Specialization in Bioinformatics \|
+University of California, Davis
 
-\| Sept 2021 - June 2025 \|
+B.S in Biotechnology with a Specialization in Bioinformatics \| Sept 2021 - June 2025 \|
 
-\|Contra Costa College \| Sept 2019 - June 2025 \|
+Contra Costa College \| Sept 2019 - June 2021 \|
+:::
 
-## Experience
+::: h1
+Experience
+:::
 
-UC Davis Analytical Lab \| Lab Assistant \| February 2023 - present
+::: grid
+::: {#about-me-1 .g-col-6}
+```         
+UC Davis Analytical Laboratory January 2023 -- June 2024|Assistant Davis, CA
+```
+
+-   Assist laboratory technicians with 40+ soil measurements daily and performances of analysis on selected chemical constituents of soil, plant, water, and feed
+:::
+
+::: {#about-me-2 .g-col-6}
+```         
+Data Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA
+```
+
+-   Formulating experimental approaches to current questions in biotechnology; performance of proposed experiments.
+
+-   Duties include quality analysis and control for sequencing data, assembling and annotating metagenomic reads, quickly comparing large sequencing datasets, document workflows using git and GitHub.
 
 ### 
 :::
+:::
+
+<!-- end grid -->
