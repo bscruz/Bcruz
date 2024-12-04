@@ -9,6 +9,8 @@ website:
     left:
       - href: about.qmd
         text: "About Me"
+      - href: myblog.qmd
+        text: "My Notes"
     right: 
       - icon: github
         href: https://github.com/bscruz

@@ -68,5 +68,19 @@
     "title": "Brenda Cruz",
     "section": "",
     "text": "Hey, I’m happy you’re here\n\nI’m currently a part of the LIFT Bioinnovation group working on setting up a computaional data course for UC Davis\n\n\nEducation\n\nUniversity of California, Davis\nB.S in Biotechnology with a Specialization in Bioinformatics | Sept 2021 - June 2025 |\nContra Costa College | Sept 2019 - June 2021 |\n\n\n\n\nExperience\n\n\n\nUC Davis Analytical Laboratory January 2023 -- June 2024|Assistant Davis, CA\n\nAssist laboratory technicians with 40+ soil measurements daily and performances of analysis on selected chemical constituents of soil, plant, water, and feed\n\n\n\nData Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA\n\nFormulating experimental approaches to current questions in biotechnology; performance of proposed experiments.\nDuties include quality analysis and control for sequencing data, assembling and annotating metagenomic reads, quickly comparing large sequencing datasets, document workflows using git and GitHub."
+  },
+  {
+    "objectID": "myblog.html",
+    "href": "myblog.html",
+    "title": "My Notes",
+    "section": "",
+    "text": "Dataset Project\n\n\n\nMyProjects\n\n\nR\n\n\nBioinformatics\n\n\n\n\nBrenda Cruz\n\n\nOct 24, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLIFT Project\n\n\n\nMyProjects\n\n\n\n\nBrenda Cruz\n\n\nOct 24, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "myblog/YYYY-MM-DD-short-post-description/index.html",
+    "href": "myblog/YYYY-MM-DD-short-post-description/index.html",
+    "title": "blog post title",
+    "section": "",
+    "text": "CitationBibTeX citation:@online{csik2022,\n  author = {Csik, Samantha},\n  title = {Blog Post Title},\n  date = {2022-10-24},\n  url = {https://samanthacsik.github.io/posts/2022-10-24-my-blog-post/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nCsik, Samantha. 2022. “Blog Post Title.” October 24, 2022.\nhttps://samanthacsik.github.io/posts/2022-10-24-my-blog-post/."
   }
 ]

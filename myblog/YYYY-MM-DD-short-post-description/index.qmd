@@ -1,0 +1,11 @@
+---
+title: "Dataset Project"
+description: "Analysing a spcific dataset of my choosing"
+author:
+  - name: Brenda Cruz
+    affiliation: University of California, Davis
+date: 10-24-2024
+image: images/illustration-of-a-hare-at-a-keyboard-vector-sticker-of-a-white-cute-cartoon-rabbit-hacker-meme-sticker-rodent-animal-hits-the-keyboard-2WD8316.jpg
+categories: [MyProjects, R, Bioinformatics]
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---

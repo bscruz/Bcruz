@@ -1,0 +1,11 @@
+---
+title: "LIFT Project"
+description: "I will be part of the Leadership and Innovation Fundamentals Training program"
+author:
+  - name: Brenda Cruz
+    affiliation: University of California, Davis
+date: 10-24-2024
+categories: [MyProjects]
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+

@@ -11,5 +11,12 @@
     "items": [
       "/blog/2024-02-20-short-post-description/index.html"
     ]
+  },
+  {
+    "listing": "/myblog.html",
+    "items": [
+      "/myblog/YYYY-MM-DD-short-post-description/index.html",
+      "/myblog/YYYY-MM-DD-LIFTproject/index.html"
+    ]
   }
 ]
