@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For my project, I decided to explore healthcare insurance data sets because I’m interested in understanding how medical conditions influence healthcare costs.</p>
 <section id="healthcare-insurance-data-set" class="level1">
 <h1>Healthcare Insurance Data set</h1>
-<div id="7c2674d0" class="cell" data-execution_count="1">
+<div id="fd2cb54d" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="66">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 <div>
 
@@ -339,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-condition-was-billed-the-most" class="level2">
 <h2 class="anchored" data-anchor-id="what-condition-was-billed-the-most">What condition was billed the most?</h2>
 <p>The pie chart below shows that <strong>diabetes</strong> was one of the most billed conditions at 16.8% of the total billing amount. A total amount billed of 2.385397e+08.</p>
-<div id="3a2efc81" class="cell" data-execution_count="2">
+<div id="e8330669" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>billing_by_condition <span class="op">=</span> df.groupby(<span class="st">'Medical Condition'</span>)[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().reset_index()</span>
@@ -361,13 +361,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Additionally, the person with the highest bill was <strong>Karen Kline.</strong> She was billed a total 104746.064748 by United Healthcare in the span of 14 days for cancer treatment.</p>
-<div id="40edf883" class="cell" data-execution_count="3">
+<div id="434340b4" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Karen <span class="op">=</span> df[df[<span class="st">'Name'</span>]<span class="op">==</span> <span class="st">'kARen klInE'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="f65bada2" class="cell" data-execution_count="4">
+<div id="b7087aeb" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mostcost <span class="op">=</span> df.groupby(<span class="st">'Name'</span>)[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">1</span>)</span>
@@ -381,7 +381,7 @@ Name: Billing Amount, dtype: float64</code></pre>
 </div>
 </div>
 <p>I decided to understand how diabetes was being treated and how it would affect the cost. This shows that the number one insurance provider for people with Diabetes was Medicare with 1730 patients total. Additionally Medicare had the highest amount billed which could be to to the the fact that they had more patients.</p>
-<div id="8f4bc02b" class="cell" data-execution_count="5">
+<div id="6e4681b5" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>diabetes <span class="op">=</span> df[df[<span class="st">'Medical Condition'</span>] <span class="op">==</span> <span class="st">'Diabetes'</span>]</span>
@@ -402,7 +402,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>Lipitor was the drug most likely prescribed to someone with diabetes. A reason for this is that people with diabetes are twice as likely to have <a href="https://www.cdc.gov/diabetes/diabetes-complications/diabetes-and-your-heart.html">heart disease</a> or a stroke compared to people without diabetes. Medications such as Lipitor are effective at lowering low-density lipoprotein (LDL) cholesterol lowering the chances of a stroke. However, penicilin was the the medication that was billed the most.</p>
-<div id="56071daf" class="cell" data-execution_count="6">
+<div id="7675f3d2" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>medication <span class="op">=</span> diabetes[<span class="st">'Medication'</span>].value_counts()</span>
@@ -431,7 +431,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div id="08f06cb9" class="cell" data-execution_count="7">
+<div id="0114bd8b" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>costmed <span class="op">=</span> df.groupby(diabetes[<span class="st">'Medication'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">5</span>)</span>
