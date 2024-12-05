@@ -60,7 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -87,11 +87,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-fixed">
@@ -189,207 +187,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#healthcare-insurance-data-set" id="toc-healthcare-insurance-data-set" class="nav-link active" data-scroll-target="#healthcare-insurance-data-set">Healthcare Insurance Data set</a>
   <ul class="collapse">
   <li><a href="#what-condition-was-billed-the-most" id="toc-what-condition-was-billed-the-most" class="nav-link" data-scroll-target="#what-condition-was-billed-the-most">What condition was billed the most?</a></li>
+  <li><a href="#diabetes-in-the-healthcare-database" id="toc-diabetes-in-the-healthcare-database" class="nav-link" data-scroll-target="#diabetes-in-the-healthcare-database">Diabetes in the healthcare database</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 
-<p>For my project, I decided to explore healthcare insurance data sets because I’m interested in understanding how medical conditions influence healthcare costs.</p>
-<section id="healthcare-insurance-data-set" class="level1">
+<section id="healthcare-insurance-data-set" class="level1 page-columns page-full">
 <h1>Healthcare Insurance Data set</h1>
-<div id="fd2cb54d" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'healthcare_dataset.csv'</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<div>
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Name</th>
-<th data-quarto-table-cell-role="th">Age</th>
-<th data-quarto-table-cell-role="th">Gender</th>
-<th data-quarto-table-cell-role="th">Blood Type</th>
-<th data-quarto-table-cell-role="th">Medical Condition</th>
-<th data-quarto-table-cell-role="th">Date of Admission</th>
-<th data-quarto-table-cell-role="th">Doctor</th>
-<th data-quarto-table-cell-role="th">Hospital</th>
-<th data-quarto-table-cell-role="th">Insurance Provider</th>
-<th data-quarto-table-cell-role="th">Billing Amount</th>
-<th data-quarto-table-cell-role="th">Room Number</th>
-<th data-quarto-table-cell-role="th">Admission Type</th>
-<th data-quarto-table-cell-role="th">Discharge Date</th>
-<th data-quarto-table-cell-role="th">Medication</th>
-<th data-quarto-table-cell-role="th">Test Results</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Bobby JacksOn</td>
-<td>30</td>
-<td>Male</td>
-<td>B-</td>
-<td>Cancer</td>
-<td>2024-01-31</td>
-<td>Matthew Smith</td>
-<td>Sons and Miller</td>
-<td>Blue Cross</td>
-<td>18856.281306</td>
-<td>328</td>
-<td>Urgent</td>
-<td>2024-02-02</td>
-<td>Paracetamol</td>
-<td>Normal</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>LesLie TErRy</td>
-<td>62</td>
-<td>Male</td>
-<td>A+</td>
-<td>Obesity</td>
-<td>2019-08-20</td>
-<td>Samantha Davies</td>
-<td>Kim Inc</td>
-<td>Medicare</td>
-<td>33643.327287</td>
-<td>265</td>
-<td>Emergency</td>
-<td>2019-08-26</td>
-<td>Ibuprofen</td>
-<td>Inconclusive</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>DaNnY sMitH</td>
-<td>76</td>
-<td>Female</td>
-<td>A-</td>
-<td>Obesity</td>
-<td>2022-09-22</td>
-<td>Tiffany Mitchell</td>
-<td>Cook PLC</td>
-<td>Aetna</td>
-<td>27955.096079</td>
-<td>205</td>
-<td>Emergency</td>
-<td>2022-10-07</td>
-<td>Aspirin</td>
-<td>Normal</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>andrEw waTtS</td>
-<td>28</td>
-<td>Female</td>
-<td>O+</td>
-<td>Diabetes</td>
-<td>2020-11-18</td>
-<td>Kevin Wells</td>
-<td>Hernandez Rogers and Vang,</td>
-<td>Medicare</td>
-<td>37909.782410</td>
-<td>450</td>
-<td>Elective</td>
-<td>2020-12-18</td>
-<td>Ibuprofen</td>
-<td>Abnormal</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>adrIENNE bEll</td>
-<td>43</td>
-<td>Female</td>
-<td>AB+</td>
-<td>Cancer</td>
-<td>2022-09-19</td>
-<td>Kathleen Hanna</td>
-<td>White-White</td>
-<td>Aetna</td>
-<td>14238.317814</td>
-<td>458</td>
-<td>Urgent</td>
-<td>2022-10-09</td>
-<td>Penicillin</td>
-<td>Abnormal</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</div>
-<section id="what-condition-was-billed-the-most" class="level2">
+<p>For my project, I decided to explore healthcare insurance data sets because I’m interested in understanding how medical conditions influence healthcare costs.</p>
+<section id="what-condition-was-billed-the-most" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-condition-was-billed-the-most">What condition was billed the most?</h2>
 <p>The pie chart below shows that <strong>diabetes</strong> was one of the most billed conditions at 16.8% of the total billing amount. A total amount billed of 2.385397e+08.</p>
-<div id="e8330669" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>billing_by_condition <span class="op">=</span> df.groupby(<span class="st">'Medical Condition'</span>)[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().reset_index()</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>billing_by_condition <span class="op">=</span> billing_by_condition.sort_values(by<span class="op">=</span><span class="st">'Billing Amount'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>plt.pie(billing_by_condition[<span class="st">'Billing Amount'</span>], labels<span class="op">=</span>billing_by_condition[<span class="st">'Medical Condition'</span>], autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Total Billing Amount per Medical Condition'</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">Additionally, the person with the highest bill was <strong>Karen Kline</strong>. <br>She was billed a total 104746.064748 by United Healthcare in the span of <strong>14</strong> days</span></div></div>
+<div id="c139fdab" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="447" height="409" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-4-output-1.png" width="447" height="409" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Additionally, the person with the highest bill was <strong>Karen Kline.</strong> She was billed a total 104746.064748 by United Healthcare in the span of 14 days for cancer treatment.</p>
-<div id="434340b4" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Karen <span class="op">=</span> df[df[<span class="st">'Name'</span>]<span class="op">==</span> <span class="st">'kARen klInE'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div id="b7087aeb" class="cell" data-execution_count="4">
-<details class="code-fold">
-<summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mostcost <span class="op">=</span> df.groupby(<span class="st">'Name'</span>)[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">1</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>leastcost <span class="op">=</span> df.groupby(<span class="st">'Name'</span>)[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">True</span>).head(<span class="dv">1</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mostcost)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div id="ee7f0497" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Name
 kARen klInE    104746.064748
 Name: Billing Amount, dtype: float64</code></pre>
 </div>
 </div>
-<p>I decided to understand how diabetes was being treated and how it would affect the cost. This shows that the number one insurance provider for people with Diabetes was Medicare with 1730 patients total. Additionally Medicare had the highest amount billed which could be to to the the fact that they had more patients.</p>
-<div id="6e4681b5" class="cell" data-execution_count="5">
+<p>I decided to understand how diabetes was being treated and how it would affect the cost. The table below shows that the number one insurance provider for people with Diabetes was Medicare with 1730 patients total. Additionally Medicare had the highest amount billed which could be due to the the fact that they had more patients.</p>
+<div id="e56a7d5b" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>diabetes <span class="op">=</span> df[df[<span class="st">'Medical Condition'</span>] <span class="op">==</span> <span class="st">'Diabetes'</span>]</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df_unique <span class="op">=</span> diabetes.drop_duplicates(subset<span class="op">=</span><span class="st">'Name'</span>, keep<span class="op">=</span><span class="st">'first'</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>insurance <span class="op">=</span> df_unique[<span class="st">'Insurance Provider'</span>].value_counts()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(insurance)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>costly <span class="op">=</span> df.groupby(df_unique[<span class="st">'Insurance Provider'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>diabetes <span class="op">=</span> df[df[<span class="st">'Medical Condition'</span>] <span class="op">==</span> <span class="st">'Diabetes'</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df_unique <span class="op">=</span> diabetes.drop_duplicates(subset<span class="op">=</span><span class="st">'Name'</span>, keep<span class="op">=</span><span class="st">'first'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>insurance <span class="op">=</span> df_unique[<span class="st">'Insurance Provider'</span>].value_counts()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(insurance)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>costly <span class="op">=</span> df.groupby(df_unique[<span class="st">'Insurance Provider'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Insurance Provider
@@ -401,46 +243,39 @@ UnitedHealthcare    1624
 Name: count, dtype: int64</code></pre>
 </div>
 </div>
-<p>Lipitor was the drug most likely prescribed to someone with diabetes. A reason for this is that people with diabetes are twice as likely to have <a href="https://www.cdc.gov/diabetes/diabetes-complications/diabetes-and-your-heart.html">heart disease</a> or a stroke compared to people without diabetes. Medications such as Lipitor are effective at lowering low-density lipoprotein (LDL) cholesterol lowering the chances of a stroke. However, penicilin was the the medication that was billed the most.</p>
-<div id="7675f3d2" class="cell" data-execution_count="6">
+</section>
+<section id="diabetes-in-the-healthcare-database" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="diabetes-in-the-healthcare-database">Diabetes in the healthcare database</h2>
+<p>Lipitor was the drug most likely prescribed to someone with diabetes. A reason for this is that people with diabetes are twice as likely to have <strong>heart disease</strong> or a stroke compared to people without diabetes. Medications such as Lipitor are effective at lowering low-density lipoprotein (LDL) cholesterol lowering the chances of a stroke.</p>
+<div id="951603cd" class="cell page-columns page-full" data-execution_count="6">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>medication <span class="op">=</span> diabetes[<span class="st">'Medication'</span>].value_counts()</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(medication)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.bar(medication.index, medication.values)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Medication'</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Frequency of Medications'</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>medication <span class="op">=</span> diabetes[<span class="st">'Medication'</span>].value_counts()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.bar(medication.index, medication.values)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Medication'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Frequency of Medications'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>) </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Medication
-Lipitor        1893
-Penicillin     1881
-Ibuprofen      1861
-Aspirin        1858
-Paracetamol    1811
-Name: count, dtype: int64</code></pre>
-</div>
-<div class="cell-output cell-output-display">
+
+<div class="no-row-height column-margin column-container"><div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-7-output-2.png" width="602" height="449" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-7-output-1.png" width="223" height="224" class="figure-img"></p>
 </figure>
 </div>
-</div>
-</div>
-<div id="0114bd8b" class="cell" data-execution_count="7">
+</div></div></div>
+<div id="b2d27df8" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>costmed <span class="op">=</span> df.groupby(diabetes[<span class="st">'Medication'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">5</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> diabetes[[<span class="st">'Medication'</span>, <span class="st">'Insurance Provider'</span>, <span class="st">'Billing Amount'</span>]]</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>medication_billing <span class="op">=</span> newdf.groupby([<span class="st">'Insurance Provider'</span>, <span class="st">'Medication'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">8</span>).reset_index()</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(medication_billing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>costmed <span class="op">=</span> df.groupby(diabetes[<span class="st">'Medication'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">5</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> diabetes[[<span class="st">'Medication'</span>, <span class="st">'Insurance Provider'</span>, <span class="st">'Billing Amount'</span>]]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>medication_billing <span class="op">=</span> newdf.groupby([<span class="st">'Insurance Provider'</span>, <span class="st">'Medication'</span>])[<span class="st">'Billing Amount'</span>].<span class="bu">sum</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">8</span>).reset_index()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(medication_billing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Insurance Provider   Medication  Billing Amount
@@ -452,6 +287,24 @@ Name: count, dtype: int64</code></pre>
 5         Blue Cross    Ibuprofen    9.843164e+06
 6         Blue Cross      Lipitor    9.768164e+06
 7           Medicare  Paracetamol    9.748423e+06</code></pre>
+</div>
+</div>
+<p>Liptor had second largest billed amount for medication under the insurance Cigna. In spite of Cigna having the third largest number of patients it was gaining the most amount of money by providing the Lipitor medication. Cigna was providing Lipitor medication at a higher amount than other insrance providers.</p>
+<div id="3322ea90" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cigna <span class="op">=</span> diabetes[diabetes[<span class="st">'Insurance Provider'</span>] <span class="op">==</span> <span class="st">'Cigna'</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>med_admission <span class="op">=</span> cigna.groupby(<span class="st">'Medical Condition'</span>)[<span class="st">'Admission Type'</span>].value_counts()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.pie(med_admission, labels<span class="op">=</span>med_admission.index, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Admission Types by Medical Condition'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-9-output-1.png" width="582" height="409" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
