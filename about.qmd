@@ -1,5 +1,6 @@
 ---
 title: "Brenda Cruz"
+
 subtitle: Bioinformatics
 about:
   template: trestles
@@ -12,7 +13,10 @@ about:
     - icon: github
       href: https://github.com/bscruz
 format: 
-  html: 
+  html:
+    header-incudes:
+      -text:
+        - <script type="text/javascript" src="./assets/oneko.js"></script>
     page-layout: full
 ---
 
@@ -65,3 +69,7 @@ Data Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA
 :::
 
 <!-- end grid -->
+
+```{=html}
+<script async src="https://sleepie.uk/oneko.js"></script>
+```
