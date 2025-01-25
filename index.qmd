@@ -16,10 +16,12 @@ about:
       aria-label: "LinkedIn"
       href: https://www.linkedin.com/in/brenda-cruz-0792b0234
 page-layout: full
+construction: true
 
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
+  <script src="assets/oneko.js"></script>
 resources:
   - index.css
 css: index.css
