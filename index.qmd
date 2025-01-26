@@ -5,7 +5,7 @@ subtitle: Biotechnology
 image-alt: "A cool little image"
 about:
   template: solana
-  image: img/cutebear.gif
+  image: img/onekko.gif
   image-width: 20em
   id: hero-heading
   links:
