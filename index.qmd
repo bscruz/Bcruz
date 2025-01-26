@@ -5,7 +5,7 @@ subtitle: Biotechnology
 image-alt: "A cool little image"
 about:
   template: solana
-  image: img/onekko.gif
+  image: img/cutebunny.gif
   image-width: 20em
   id: hero-heading
   links:
@@ -21,7 +21,7 @@ construction: true
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
-  <link rel="javascript" href="/assets/oneko.js">
+  <link rel="javascript" href="oneko.js">
 
 css: index.css
 ---
@@ -31,6 +31,8 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 
 [About Me! →](/about.qmd){.about-links .subtitle}
 :::
+<!-- end grid -->
+
 
 
 ```{=html}

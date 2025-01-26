@@ -4,7 +4,7 @@ title: "Brenda Cruz"
 subtitle: Bioinformatics
 about:
   template: trestles
-  image: images/yas.jpeg
+  image: img/oneko-dog.gif
   image-width: 15em
   id: hero-heading
   links:
