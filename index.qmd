@@ -30,3 +30,8 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 
 [About Me! →](/about.qmd){.about-links .subtitle}
 :::
+
+
+```{=html}
+<script async src="https://sleepie.uk/oneko.js"></script>
+```
