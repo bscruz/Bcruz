@@ -21,7 +21,7 @@ construction: true
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
-  <link rel="javascript" href="oneko.js">
+  <link rel="javascript" href="/assets/oneko.js">
 
 css: index.css
 ---
