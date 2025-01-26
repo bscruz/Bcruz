@@ -21,7 +21,6 @@ construction: true
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
-  <link rel="javascript" href="/assets/oneko.js">
 
 css: index.css
 ---
@@ -32,9 +31,9 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 [About Me! →](/about.qmd){.about-links .subtitle}
 :::
 <!-- end grid -->
-
+<script data-asdf="true" src="./neko.js">
 
 
 ```{=html}
-<script async src="https://bscruz.github.io/Bcruz/assets/oneko.js"></script>
+<script data-asdf="true" src="https://bscruz.github.io/Bcruz/assets/oneko.js"></script>
 ```

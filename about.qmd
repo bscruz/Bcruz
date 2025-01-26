@@ -4,7 +4,7 @@ title: "Brenda Cruz"
 subtitle: Bioinformatics
 about:
   template: trestles
-  image: img/oneko-dog.gif
+  image: img/world.gif
   image-width: 15em
   id: hero-heading
   links:
@@ -71,5 +71,6 @@ Data Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA
 <!-- end grid -->
 
 ```{=html}
-<script async src="https://sleepie.uk/oneko.js"></script>
+<script async src="https://bscruz.github.io/Bcruz/assets/oneko.js"></script>
 ```
+
