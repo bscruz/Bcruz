@@ -1,140 +1,236 @@
-import pygame
-import random
-import math
-import time
+(function oneko() {
+  const isReducedMotion =
+    window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
+    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
-# Initialize pygame
-pygame.init()
+  if (isReducedMotion) return;
 
-# Set up the window
-screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Neko Follows Mouse")
+  const nekoEl = document.createElement("div");
 
-# Load neko sprite sheet
-sprite_sheet = pygame.image.load("img/oneko.png").convert_alpha()  # Assuming you have an image file
+  let nekoPosX = 32;
+  let nekoPosY = 32;
 
-# Define sprite sets (similar to JS sprite sets)
-sprite_sets = {
-    'idle': [(-3, -3)],
-    'alert': [(-7, -3)],
-    'scratch': [(-5, 0), (-6, 0), (-7, 0)],
-    'tired': [(-3, -2)],
-    'sleeping': [(-2, 0), (-2, -1)],
-    'N': [(-1, -2), (-1, -3)],
-    'NE': [(0, -2), (0, -3)],
-    'E': [(-3, 0), (-3, -1)],
-    'SE': [(-5, -1), (-5, -2)],
-    'S': [(-6, -3), (-7, -2)],
-    'SW': [(-5, -3), (-6, -1)],
-    'W': [(-4, -2), (-4, -3)],
-    'NW': [(-1, 0), (-1, -1)],
-}
+  let mousePosX = 0;
+  let mousePosY = 0;
 
-# Neko properties
-neko_pos_x = 32
-neko_pos_y = 32
-mouse_pos_x = 0
-mouse_pos_y = 0
-frame_count = 0
-idle_time = 0
-idle_animation = None
-idle_animation_frame = 0
-neko_speed = 10
+  let frameCount = 0;
+  let idleTime = 0;
+  let idleAnimation = null;
+  let idleAnimationFrame = 0;
 
-# Function to set sprite
-def set_sprite(name, frame):
-    sprite = sprite_sets[name][frame % len(sprite_sets[name])]
-    return sprite[0] * 32, sprite[1] * 32
+  const nekoSpeed = 10;
+  const spriteSets = {
+    idle: [[-3, -3]],
+    alert: [[-7, -3]],
+    scratchSelf: [
+      [-5, 0],
+      [-6, 0],
+      [-7, 0],
+    ],
+    scratchWallN: [
+      [0, 0],
+      [0, -1],
+    ],
+    scratchWallS: [
+      [-7, -1],
+      [-6, -2],
+    ],
+    scratchWallE: [
+      [-2, -2],
+      [-2, -3],
+    ],
+    scratchWallW: [
+      [-4, 0],
+      [-4, -1],
+    ],
+    tired: [[-3, -2]],
+    sleeping: [
+      [-2, 0],
+      [-2, -1],
+    ],
+    N: [
+      [-1, -2],
+      [-1, -3],
+    ],
+    NE: [
+      [0, -2],
+      [0, -3],
+    ],
+    E: [
+      [-3, 0],
+      [-3, -1],
+    ],
+    SE: [
+      [-5, -1],
+      [-5, -2],
+    ],
+    S: [
+      [-6, -3],
+      [-7, -2],
+    ],
+    SW: [
+      [-5, -3],
+      [-6, -1],
+    ],
+    W: [
+      [-4, -2],
+      [-4, -3],
+    ],
+    NW: [
+      [-1, 0],
+      [-1, -1],
+    ],
+  };
 
-# Function to handle idle animations (sleeping, scratching, etc.)
-def idle():
-    global idle_animation, idle_animation_frame
-    global idle_time
+  function init() {
+    nekoEl.id = "oneko";
+    nekoEl.onclick = function(){window.open("https://bscruz.github.io/Bcruz/myblog/YYYY-MM-DD-LIFTproject/", '_blank').focus()}
+    nekoEl.ariaHidden = true;
+    nekoEl.style.width = "32px";
+    nekoEl.style.height = "32px";
+    nekoEl.style.position = "fixed";
+    nekoEl.style.imageRendering = "pixelated";
+    nekoEl.style.left = `${nekoPosX - 16}px`;
+    nekoEl.style.top = `${nekoPosY - 16}px`;
+    nekoEl.style.zIndex = 2147483647;
 
-    idle_time += 1
+    let nekoFile = "https://sleepie.uk/oneko.gif"
+    const curScript = document.currentScript
+    if (curScript && curScript.dataset.cat) {
+      nekoFile = curScript.dataset.cat
+    }
+    nekoEl.style.backgroundImage = `url(${nekoFile})`;
 
-    if idle_time > 10 and random.randint(0, 200) == 0 and idle_animation is None:
-        idle_animation = random.choice(["sleeping", "scratch"])
+    document.body.appendChild(nekoEl);
 
-    if idle_animation == "sleeping":
-        if idle_animation_frame < 8:
-            return set_sprite("tired", 0)
-        return set_sprite("sleeping", idle_animation_frame // 4)
-    elif idle_animation == "scratch":
-        return set_sprite("scratch", idle_animation_frame)
-    else:
-        return set_sprite("idle", 0)
+    document.addEventListener("mousemove", function (event) {
+      mousePosX = event.clientX;
+      mousePosY = event.clientY;
+    });
 
-    idle_animation_frame += 1
-    return (0, 0)
+    window.requestAnimationFrame(onAnimationFrame);
+  }
 
-# Main animation loop to follow mouse and update position
-def frame():
-    global neko_pos_x, neko_pos_y, mouse_pos_x, mouse_pos_y
-    global idle_animation, idle_animation_frame, frame_count
+  let lastFrameTimestamp;
 
-    frame_count += 1
-    diff_x = neko_pos_x - mouse_pos_x
-    diff_y = neko_pos_y - mouse_pos_y
-    distance = math.sqrt(diff_x ** 2 + diff_y ** 2)
+  function onAnimationFrame(timestamp) {
+    // Stops execution if the neko element is removed from DOM
+    if (!nekoEl.isConnected) {
+      return;
+    }
+    if (!lastFrameTimestamp) {
+      lastFrameTimestamp = timestamp;
+    }
+    if (timestamp - lastFrameTimestamp > 100) {
+      lastFrameTimestamp = timestamp
+      frame()
+    }
+    window.requestAnimationFrame(onAnimationFrame);
+  }
 
-    if distance < neko_speed or distance < 48:
-        return idle()
+  function setSprite(name, frame) {
+    const sprite = spriteSets[name][frame % spriteSets[name].length];
+    nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${sprite[1] * 32}px`;
+  }
 
-    idle_animation = None
-    idle_animation_frame = 0
+  function resetIdleAnimation() {
+    idleAnimation = null;
+    idleAnimationFrame = 0;
+  }
 
-    if idle_time > 1:
-        idle_time = min(idle_time, 7)
-        idle_time -= 1
-        return set_sprite("alert", 0)
+  function idle() {
+    idleTime += 1;
 
-    direction = ""
-    if diff_y / distance > 0.5:
-        direction += "N"
-    if diff_y / distance < -0.5:
-        direction += "S"
-    if diff_x / distance > 0.5:
-        direction += "W"
-    if diff_x / distance < -0.5:
-        direction += "E"
+    // every ~ 20 seconds
+    if (
+      idleTime > 10 &&
+      Math.floor(Math.random() * 200) == 0 &&
+      idleAnimation == null
+    ) {
+      let avalibleIdleAnimations = ["sleeping", "scratchSelf"];
+      if (nekoPosX < 32) {
+        avalibleIdleAnimations.push("scratchWallW");
+      }
+      if (nekoPosY < 32) {
+        avalibleIdleAnimations.push("scratchWallN");
+      }
+      if (nekoPosX > window.innerWidth - 32) {
+        avalibleIdleAnimations.push("scratchWallE");
+      }
+      if (nekoPosY > window.innerHeight - 32) {
+        avalibleIdleAnimations.push("scratchWallS");
+      }
+      idleAnimation =
+        avalibleIdleAnimations[
+          Math.floor(Math.random() * avalibleIdleAnimations.length)
+        ];
+    }
 
-    sprite_pos = set_sprite(direction, frame_count)
-    neko_pos_x -= (diff_x / distance) * neko_speed
-    neko_pos_y -= (diff_y / distance) * neko_speed
+    switch (idleAnimation) {
+      case "sleeping":
+        if (idleAnimationFrame < 8) {
+          setSprite("tired", 0);
+          break;
+        }
+        setSprite("sleeping", Math.floor(idleAnimationFrame / 4));
+        if (idleAnimationFrame > 192) {
+          resetIdleAnimation();
+        }
+        break;
+      case "scratchWallN":
+      case "scratchWallS":
+      case "scratchWallE":
+      case "scratchWallW":
+      case "scratchSelf":
+        setSprite(idleAnimation, idleAnimationFrame);
+        if (idleAnimationFrame > 9) {
+          resetIdleAnimation();
+        }
+        break;
+      default:
+        setSprite("idle", 0);
+        return;
+    }
+    idleAnimationFrame += 1;
+  }
 
-    return sprite_pos
+  function frame() {
+    frameCount += 1;
+    const diffX = nekoPosX - mousePosX;
+    const diffY = nekoPosY - mousePosY;
+    const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
 
-# Create Neko
-neko_rect = pygame.Rect(neko_pos_x, neko_pos_y, 32, 32)
+    if (distance < nekoSpeed || distance < 48) {
+      idle();
+      return;
+    }
 
-# Main game loop
-running = True
-while running:
-    screen.fill((255, 255, 255))  # Clear screen to white
+    idleAnimation = null;
+    idleAnimationFrame = 0;
 
-    # Handle events
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        elif event.type == pygame.MOUSEMOTION:
-            mouse_pos_x, mouse_pos_y = event.pos
+    if (idleTime > 1) {
+      setSprite("alert", 0);
+      idleTime = Math.min(idleTime, 7);
+      idleTime -= 1;
+      return;
+    }
 
-    # Get the sprite for the neko
-    sprite_pos = frame()
+    let direction;
+    direction = diffY / distance > 0.5 ? "N" : "";
+    direction += diffY / distance < -0.5 ? "S" : "";
+    direction += diffX / distance > 0.5 ? "W" : "";
+    direction += diffX / distance < -0.5 ? "E" : "";
+    setSprite(direction, frameCount);
 
-    # Update the neko position and sprite
-    neko_rect.x = neko_pos_x - 16
-    neko_rect.y = neko_pos_y - 16
+    nekoPosX -= (diffX / distance) * nekoSpeed;
+    nekoPosY -= (diffY / distance) * nekoSpeed;
 
-    # Draw the neko sprite
-    screen.blit(sprite_sheet, neko_rect, pygame.Rect(sprite_pos[0], sprite_pos[1], 32, 32))
+    nekoPosX = Math.min(Math.max(16, nekoPosX), window.innerWidth - 16);
+    nekoPosY = Math.min(Math.max(16, nekoPosY), window.innerHeight - 16);
 
-    # Update the screen
-    pygame.display.update()
+    nekoEl.style.left = `${nekoPosX - 16}px`;
+    nekoEl.style.top = `${nekoPosY - 16}px`;
+  }
 
-    # Control the frame rate
-    pygame.time.Clock().tick(30)
-
-# Quit pygame
-pygame.quit()
+  init();
+})();

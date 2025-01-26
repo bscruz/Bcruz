@@ -1,15 +1,16 @@
 
 }
-//* title */
+//* title changes the navigation bar title */
 .title {
+  font-family: "Comic Sans MS";
   font-size: 3em;
   font-weight: 700;
   line-height: 1.1em !important;
 }
 
-/* subtitle + Learn More About Me */
+/* subtitle  this changes the biotechnotlogy + Learn More About Me */
 .subtitle {
-  font-family: "Petrona";
+  font-family: "Comic Sans MS";
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;

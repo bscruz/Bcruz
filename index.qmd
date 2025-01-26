@@ -5,8 +5,8 @@ subtitle: Biotechnology
 image-alt: "A cool little image"
 about:
   template: solana
-  image: images/_-removebg-preview.png
-  image-width: 10em
+  image: img/cutebear.gif
+  image-width: 20em
   id: hero-heading
   links:
     - icon: github
@@ -21,9 +21,7 @@ construction: true
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
-  <script src="assets/oneko.js"></script>
-resources:
-  - index.css
+
 css: index.css
 ---
 
