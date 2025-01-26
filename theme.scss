@@ -56,7 +56,7 @@ $border-radius-sm:            .3rem !default;
 // Fonts // CHANGES MY TITLE NAME
 
 // stylelint-disable-next-line value-keyword-case
-$headings-font-family:        Montserrat, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$headings-font-family:        Montserrat, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, Courier, monospace !default;
 $headings-color:              $primary !default;
 
 // Tables
@@ -359,12 +359,16 @@ $navbar-fg:                   $primary;
   font-size: 3em;
   font-weight: 700;
   line-height: 1.1em;
-  font-family: "Comic Sans MS";
+  font-family: "Courier Monospace";
 }
 
-// subtitle + Learn More About Me
+// subtitle + Learn More About Me THIS CHANGES THE BOUT E SUBTITLE 
 .subtitle {
   font-size: 1.2em;
+  font-family: "Courier New";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   // links within subtitles
   a {
     color: $green;

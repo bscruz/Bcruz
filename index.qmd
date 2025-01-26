@@ -4,9 +4,9 @@ pagetitle: "Brenda Cruz"
 subtitle: Biotechnology
 image-alt: "A cool little image"
 about:
-  template: solana
+  template: trestles
   image: img/cutebunny.gif
-  image-width: 20em
+  image-width: 10em
   id: hero-heading
   links:
     - icon: github
@@ -15,25 +15,33 @@ about:
     - icon: linkedin
       aria-label: "LinkedIn"
       href: https://www.linkedin.com/in/brenda-cruz-0792b0234
-page-layout: full
 construction: true
+toc: false
 
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
   <link rel="javascript" href="assets/nekkko.js">
+  <script src="https://bscruz.github.io/Bcruz/assets/nekkko.js"></script>
 
 css: index.css
 ---
 
-::: {#hero-heading}
+:::{#hero-heading}
 Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 and EVE 103 which introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program called Hack the Hood based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, has empowered me to bring my knowledge back to the community.
 
 [About Me! →](/about.qmd){.about-links .subtitle}
 :::
-<!-- end grid -->
 
+<!-- hero-heading -->
+:::{.br}
+:::
+## Skills 
+::: column-screen
+::: holder
+::: news
+Bilingual (fluent in spanish and english), Flexibility & Adaptability, Graphic designer(Blender, Quarto, Manim) , Work study applicant, Problem solving, Communication, proficient in Github, Python, R, CSS, html, bash scripting
+:::
+:::
+:::
 
-```{=html}
-<script data-asdf="true" src="https://bscruz.github.io/Bcruz/assets/oneko.js"></script>
-```

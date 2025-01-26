@@ -1,8 +1,12 @@
 
+.br {
+   display: block;
+   margin: 0.5px 0;
+}
 }
 //* title changes the navigation bar title */
 .title {
-  font-family: "Comic Sans MS";
+  font-family: "Arial";
   font-size: 3em;
   font-weight: 700;
   line-height: 1.1em !important;
@@ -10,8 +14,8 @@
 
 /* subtitle  this changes the biotechnotlogy + Learn More About Me */
 .subtitle {
-  font-family: "Comic Sans MS";
-  font-size: 1rem;
+  font-family: "Courier New";
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -111,3 +115,88 @@
       padding: 0 2em 0 2em !important;
     }
 }
+/*marquee*/
+/* https://stackoverflow.com/a/53632585 */
+.holder {
+    position: relative;
+    width: 300vw;
+    height: 50px;
+    overflow: hidden;
+  }
+  @media only screen and (max-width: 1200px) {
+  .holder {
+    width: 500vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .holder {
+    width: 700vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .holder {
+    width: 1000vw;
+  }
+}
+  .news,
+  .news2 {
+    width: 300vw;
+    height: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    animation-play-state: running;
+  }
+  .news {
+    animation : slide 30s linear infinite alternate;
+    animation-direction: reverse;
+    
+  }
+  .news2 {
+    animation : slide-new2 05s linear infinite;
+    
+  }
+  @media only screen and (max-width: 1200px) {
+  .news,
+  .news2 {
+    animation-duration: 60s;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .news,
+  .news2 {
+    animation-duration: 70s;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .news,
+  .news2 {
+    animation-duration: 85s;
+  }
+}
+  
+  @keyframes slide {
+    from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+  }
+  @keyframes slide-news2 {
+    from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+  }
+
+ 
