@@ -40,8 +40,10 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 ::: column-screen
 ::: holder
 ::: news
-Bilingual (fluent in spanish and english), Flexibility & Adaptability, Graphic designer(Blender, Quarto, Manim) , Work study applicant, Problem solving, Communication, proficient in Github, Python, R, CSS, html, bash scripting
+
+Bilingual(spanish and english), Flexibility & Adaptability, Graphic designer , Work study applicant, Problem solving, Communication, proficient in Github, Python, R, CSS, html, bash scripting
 :::
 :::
 :::
+
 
