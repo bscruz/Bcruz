@@ -21,6 +21,7 @@ construction: true
 
 header-includes: >
   <link rel="stylesheet" href="index.css">
+  <link rel="javascript" href="assets/nekkko.js">
 
 css: index.css
 ---
@@ -31,7 +32,6 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 [About Me! →](/about.qmd){.about-links .subtitle}
 :::
 <!-- end grid -->
-
 
 
 ```{=html}
