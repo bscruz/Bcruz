@@ -31,7 +31,7 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 [About Me! →](/about.qmd){.about-links .subtitle}
 :::
 <!-- end grid -->
-<script data-asdf="true" src="./neko.js">
+
 
 
 ```{=html}
