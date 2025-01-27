@@ -5,26 +5,55 @@
 .fa-brands{
   color:green;
 }
+
 .about-contents {
   backdrop-filter: blur(6px);
   border-radius: 20px;
   border: 20px solid #fff1;
+  transform: translateX(100px)
 }
 
 .trail {
   color: #5ab400;
   column-gap: 10em !important;
-  padding: 5px
+  padding: 5px;
   background-color: #fff7;
-  border-radius: 50%;
+  border-radius: 100%;
   height: 5px;
   position: absolute;
   offset-path: border-box;
   offset-anchor: 100% 100%;
+  offset-distance: 100%;
   animation: trail 8s infinite linear;
 }
 
 @keyframes trail {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 50%;
+  }
+}
+
+.trail2 {
+  color: #5ab400;
+  column-gap: 10em !important;
+  padding: 5px;
+  background-color: #fff7;
+  border-radius: 100%;
+  height: 5px;
+  position: absolute;
+  offset-path: border-box;
+  offset-anchor: 100% 100%;
+
+  animation: trail2 8s infinite linear;
+}
+
+@keyframes trail2 {
+  from {
+    offset-distance: 50%;
+  }
   to {
     offset-distance: 100%;
   }
@@ -51,6 +80,17 @@
   font-weight: 700;
   line-height: 1.1em !important;
 }
+.title{
+  all: unset;
+  color: rgb(0, 102, 0);
+  font-family: "Courier New";
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.1em !important;
+
+  
+}
+      
 
 /* subtitle  this changes the biotechnotlogy + Learn More About Me */
 .subtitle {
@@ -69,6 +109,8 @@
 
 /* blurb */
 .about-contents {
+
+  text-align: center;
   padding: 0 0 0 2em !important;
 }
 
@@ -202,7 +244,7 @@
     
   }
   .news2 {
-    animation : slide-new2 50s linear infinite;
+    animation : slide-news2 50s linear infinite;
     animation-delay: -17.5s;
     
   }

@@ -3,7 +3,6 @@ title: "Brenda Cruz"
 pagetitle: "Brenda Cruz"
 subtitle: Biotechnology
 image-alt: "A cool little image"
-
 about:
   template: trestles
   image: img/professional.gif
@@ -11,25 +10,23 @@ about:
   id: hero-heading
   links:
     - icon: github
+      aria-label: GitHub
       href: https://github.com/bscruz
     - icon: linkedin
       aria-label: "LinkedIn"
-      href: https:www.linkedin.com/in/brendascruz8
+      href: https://www.linkedin.com/in/brenda-cruz-0792b0234
+page-layout: full
 construction: true
 toc: false
 execute: 
   freeze: false
   echo: false
   warning: false
+
 header-includes: >
-  <style>
-          h1 {
-          color: rgb(0, 102, 0);
-          }
-          </style>
+
   <link rel="stylesheet" href="index.css">
-  
-  
+
   <link rel="javascript" href="assets/nekkko.js">
   <script src="https://bscruz.github.io/Bcruz/assets/nekkko.js"></script>
 
@@ -38,43 +35,28 @@ resources:
   - <link rel="stylesheet" href="index.css">
 ---
 
-
-
-:::{#hero-heading}
+::: {#hero-heading}
 :::trail
-︎☆
+⎯
 :::
-
- 
-
-
-Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 and EVE 103 which introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program called Hack the Hood based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, has empowered me to bring my knowledge back to the community.
-
-[About Me! →](/about.qmd){.about-links .subtitle}
+:::trail2
+⎯
 :::
-
-
+Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 and EVE 103 which introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program called Hack the Hood based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, has empowered me to bring my knowledge back to the community. [About Me! →](/about.qmd){.about-links .subtitle}
+:::
 <!-- hero-heading -->
 :::{.br}
 :::
 
+## SKILLS
 
-
-## Skills 
 ::: column-screen
-
 ::: holder
 ::: news
-::: news2
-
+:::news2
 Bilingual (Spanish and English), Flexibility & Adaptability, Graphic Designer, Data Analysis, Problem Solving, Communication, Proficient in Github, Git, {{< fa brands python >}} Python, {{< fa r >}} Rstudio, Quarto, {{< fa brands css >}} CSS, {{< fa brands html5 >}} Html, {{< fa terminal >}} Bash Scripting, Bilingual (Spanish and English), Flexibility & Adaptability, Graphic designer, Work study applicant, Problem solving, Communication, Proficient in Github, {{< fa brands python >}} Python, {{< fa r >}} Rstudio, Quarto, {{< fa brands css >}} CSS, {{< fa brands html5 >}} Html, {{< fa terminal >}} Bash Scripting, Bilingual (Spanish and English), Flexibility & Adaptability, Graphic designer , Data Analysis, Problem solving, Communication, Proficient in Github, {{< fa brands python >}} Python, {{< fa r >}} Rstudio, Quarto, {{< fa brands css >}} CSS, {{< fa brands html5 >}} Html, {{< fa terminal >}} Bash Scripting. 
 
-
 :::
 :::
 :::
 :::
-
-
-
-
