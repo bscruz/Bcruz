@@ -9,7 +9,7 @@ about:
   id: hero-heading
   links:
     - icon: linkedin
-      href: www.linkedin.com/in/brenda-cruz-0792b0234
+      href: https:www.linkedin.com/in/brendascruz8
     - icon: github
       href: https://github.com/bscruz
 format: 

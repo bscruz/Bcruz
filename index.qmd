@@ -6,16 +6,15 @@ image-alt: "A cool little image"
 
 about:
   template: trestles
-  image: img/cutebunny.gif
-  image-width: 10em
+  image: img/professional.gif
+  image-width: 20em
   id: hero-heading
   links:
     - icon: github
-      aria-label: GitHub
       href: https://github.com/bscruz
     - icon: linkedin
       aria-label: "LinkedIn"
-      href: www.linkedin.com/in/brendascruz8
+      href: https:www.linkedin.com/in/brendascruz8
 construction: true
 toc: false
 execute: 
@@ -29,6 +28,8 @@ header-includes: >
           }
           </style>
   <link rel="stylesheet" href="index.css">
+  
+  
   <link rel="javascript" href="assets/nekkko.js">
   <script src="https://bscruz.github.io/Bcruz/assets/nekkko.js"></script>
 
@@ -43,6 +44,8 @@ resources:
 :::trail
 ︎☆
 :::
+
+ 
 
 
 Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 and EVE 103 which introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program called Hack the Hood based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, has empowered me to bring my knowledge back to the community.
@@ -64,14 +67,13 @@ Biotechnology is a field that allows me to explore the life sciences while also 
 ::: news
 ::: news2
 
-Bilingual (Spanish and English), Flexibility & Adaptability, Graphic Designer, Data Analysis, Problem Solving, Communication, Proficient in Github, Git, Python, R, Quarto CSS, Html, Bash Scripting Bilingual (Spanish and English), Flexibility & Adaptability, Graphic designer, Work study applicant, Problem solving, Communication, Proficient in Github, Python, R, Quarto CSS, html, bash scripting, Bilingual (Spanish and English), Flexibility & Adaptability, Graphic designer , Data Analysis, Problem solving, Communication, Proficient in Github, Python, R, Quarto, CSS, html, Bash Scripting
-
-:::
-:::
-:::
-:::
+Bilingual (Spanish and English), Flexibility & Adaptability, Graphic Designer, Data Analysis, Problem Solving, Communication, Proficient in Github, Git, {{< fa brands python >}} Python, {{< fa r >}} Rstudio, Quarto, {{< fa brands css >}} CSS, {{< fa brands html5 >}} Html, {{< fa terminal >}} Bash Scripting, Bilingual (Spanish and English), Flexibility & Adaptability, Graphic designer, Work study applicant, Problem solving, Communication, Proficient in Github, {{< fa brands python >}} Python, {{< fa r >}} Rstudio, Quarto, {{< fa brands css >}} CSS, {{< fa brands html5 >}} Html, {{< fa terminal >}} Bash Scripting, Bilingual (Spanish and English), Flexibility & Adaptability, Graphic designer , Data Analysis, Problem solving, Communication, Proficient in Github, {{< fa brands python >}} Python, {{< fa r >}} Rstudio, Quarto, {{< fa brands css >}} CSS, {{< fa brands html5 >}} Html, {{< fa terminal >}} Bash Scripting. 
 
 
+:::
+:::
+:::
+:::
 
 
 
