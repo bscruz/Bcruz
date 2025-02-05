@@ -1,0 +1,56 @@
+.fa-solid{
+  color:green;
+}
+.form-control::placeholder{
+  color:grey;
+}
+.form-control:focus{
+  color:black;
+}
+.hover-text:hover {
+    color: blue; /* Color on hover */
+}
+
+#form {
+  margin-top: 2em
+  position: relative;
+  left: 100px;
+}
+.
+
+/* mobile query up for screens up to ~992px wide */
+@media screen and (max-width: 991.98px) {
+  
+  /* wrap lately section */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  #form {
+    position: static;
+    margin-top: 0em;
+    flex-basis: 100% !important;
+    flex-grow: 1;
+  }
+  .element.style {
+    all: unset;
+    position: relative;
+    left: 100px !important
+  }
+}
+
+/* 
+#custom-substack-embed p.success {
+  color: #002642 !important;
+  font-family: "Red Hat Text";
+  font-weight: 400;
+}
+
+
+#custom-substack-embed .custom-substack-widget.csw-theme-custom {
+  font-family: "Red Hat Text";
+  font-weight: 400;
+}
+*/

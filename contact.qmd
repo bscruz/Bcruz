@@ -1,0 +1,54 @@
+---
+pagetitle: Brenda Cruz - Contact
+# title: Send me a note
+name: Contact Form
+page-layout: article
+format: 
+  html: 
+    grid:
+      margin-width: 0px
+      sidebar-width: 0px
+
+header-includes: >
+  <link rel="stylesheet" href="cssfiles/contact.css">
+resources:
+  - cssfiles/contact.css
+---
+
+
+::: {.grid}
+
+::: {.g-col-5 #note}
+
+# Send me a note{{< fa feather-pointed >}}
+
+You can use this form to contact me about incoming opportunities or simply to say hello. As a first-generation student without many direct industry connections, I know that breaking into the biotech field will be challenging. That's why I’m focusing on securing internships to gain experience and build a professional network. So please feel free to drop in and say hello. 
+
+:::
+
+::: {.g-col-6 #form}
+
+<form 
+style="margin-top: 0em; position: relative;
+  left: 100px;"
+action="https://formspree.io/f/meoeavvo" method="POST" accept-charset="utf-8">
+
+
+<label for="full-name">Full Name</label>
+<input type="text" name="name" id="full-name" class="form-control"  style= "color: black;" placeholder="First and Last" required>
+
+<label for="email-address">Email Address</label>
+<input type="email" name="_replyto" id="email-address" class="form-control" style= "color: black;" placeholder="your@email.here" required>
+
+<label for="message">Message</label>
+  <textarea rows="6" name="message" id="message" class="form-control" style= "color: black;" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required></textarea>
+
+<button type="submit" class="btn btn-primary mt-4" style="color: darkgreen;" >Send message</button>
+</form>
+
+:::
+:::
+
+
+
+

@@ -65,6 +65,11 @@
             color: #5ab400;
             text-align: center;
           }
+        .trail2 {
+          all: unset;
+          color: #5ab400;
+          text-align: center;
+        }
 }
 
 .br {
@@ -185,7 +190,8 @@
 
     /* blurb */
     .about-contents {
-      padding: 0 0 0 0em !important;
+      position: relative;
+      right: 115px
     }
 
     /* center Learn More About Me */
@@ -230,7 +236,7 @@
 }
   .news,
   .news2 {
-    width: 200%;
+    width: 300%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -238,13 +244,13 @@
     animation-play-state: running;
   }
   .news {
-    animation : slide 50s linear infinite;
+    animation : slide 60s linear infinite;
     animation-direction: reverse;
     animation-delay: -17.5s;
     
   }
   .news2 {
-    animation : slide-news2 50s linear infinite;
+    animation : slide-news2 60s linear infinite;
     animation-delay: -17.5s;
     
   }
