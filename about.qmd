@@ -49,7 +49,7 @@ Experience
 ::: grid
 ::: {#about-me-1 .g-col-6}
 ```         
-UC Davis Analytical Laboratory January 2023 -- June 2024|Assistant Davis, CA
+UC Davis Analytical Laboratory 
 ```
 
 -   Assist laboratory technicians with 40+ soil measurements daily and performances of analysis on selected chemical constituents of soil, plant, water, and feed
@@ -57,7 +57,7 @@ UC Davis Analytical Laboratory January 2023 -- June 2024|Assistant Davis, CA
 
 ::: {#about-me-2 .g-col-6}
 ```         
-Data Intensive Biology Lab June 2023 -- June 2024|Intern Davis, CA
+Data Intensive Biology Lab 
 ```
 
 -   Formulating experimental approaches to current questions in biotechnology; performance of proposed experiments.
