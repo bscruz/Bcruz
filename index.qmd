@@ -45,9 +45,13 @@ resources:
 ⎯
 :::
 
+<<<<<<< HEAD
 Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 which have introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program Data Science program based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. Through this experience, has empowered me to bring my knowledge back to the community.
 
 [About Me! →](/about.qmd){.about-links .subtitle}
+=======
+Biotechnology is a field that allows me to explore the life sciences while also engaging with the technological advancements shaping our world. Within biotechnology, my focus lies in bioinformatics, as a senior with experience in computational data, I have a solid foundation in data analysis from courses such as BIT150 which have introduced me to computational methods for analyzing genome-wide nucleotide sequences. Additionally, I am currently in a program Data Science program based in Oakland, that delivers data science knowledge to inexperienced and disadvantaged groups. This experience, has empowered me to bring my knowledge back to the community! [About Me! →](/about.qmd){.about-links .subtitle}
+
 :::
 
 <!-- hero-heading -->
